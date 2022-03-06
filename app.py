@@ -12,9 +12,9 @@ def sh():
     user = request.args.get("User")
     re = requests.get("https://t.me/{user}").text
     if "tgme_username_link" in re:
-        return jsonify(Telegram="@JJJJzJJJ", re = User, User="True")
+        return jsonify(Telegram="@JJJJzJJJ",User="True")
     else:
-        return jsonify(Telegram="@JJJJzJJJ",              re = User, User="False")
+        return jsonify(Telegram="@JJJJzJJJ",User="False")
 
 
 if __name__ == "__main__":
