@@ -10,7 +10,7 @@ def q():
 @app.route("/check/telegram/")
 def sh():
     user = request.args.get("User")
-    re = requests.get("https://t.me/{user}").text
+    re = requests.get(f"https://t.me/{user}").text
     if "tgme_username_link" in re:
         return jsonify(Telegram="@JJJJzJJJ",User="True")
     else:
